@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+// Colores
+$gradient-bg: linear-gradient(to right top, #f7931a, #bc7018, #844f14, #51300f, #231400)
+$bitcoin-orange: #f7931a
+$soft-orange: #ffe9d5
+$secondary-blue: #1a9af7
+$soft-blue: #e7f5ff
+$gray: #bababa
+$off-white: #faf8f7
+
+.material-icons-outlined
+    line-height: 0
+    user-select: none
+
+*
+    box-sizing: border-box
+    font-family: 'DM Sans', sans-serif;
+
+html
+    font-size: 10px
+
+.header
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+    inline-size: 100%
+    min-inline-size: 320px
+    block-size: 334px
+    text-align: center
+    background: $gradient-bg
+    &__img
+        align-self: center
+        margin-block-start: 60px
+        inline-size: 150px
+        block-size: 24px
+    &__title-container
+        align-self: center
+        margin-block-start: 40px
+        inline-size: 90%
+        min-inline-size: 288px
+        max-inline-size: 900px
+        block-size: 218px
+        text-align: center
+    &__h1
+        font-size: 2.4rem
+        line-height: 2.6rem
+        color: white
+    &__p
+        margin-block-start: 25px
+        font-size: 1.4rem
+        font-weight: bold
+        line-height: 1.8rem
+        color: $soft-orange
+
+.header-btn
+    display: flex
+    align-items: center
+    justify-content: center
+    position: absolute
+    inset-block-start: 270px
+    inset-inline-start: calc(50% - 118px)
+    margin-block-start: 35px
+    padding: 15px
+    inline-size: 229px
+    block-size: 48px
+    text-decoration: none
+    font-size: 1.4rem
+    font-weight: bold
+    color: black
+    background-color: $off-white
+    box-shadow: 0px 4px 8px rgba(33, 13, 5, 0.16)
+    border-radius: 5px
+    &__icon
+        margin-inline-start: 8px
+
+.exchange
+    inline-size: 100%
+    block-size: auto
+    padding: 80px 0 30px
+    text-align: center
+    background-color: $off-white
+    &__img
+        inline-size: 200px
+        block-size: 200px
+        margin: 0 auto 50px
+        background-image: url('../img/image-section.svg')
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+    &__container-text
+        inline-size: 90%
+        min-inline-size: 288px
+        max-inline-size: 900px
+        margin: 0 auto
+    &__h2
+        margin-block-end: 30px
+        font-size: 2.4rem
+        font-weight: bold
+        line-height: 2.6rem
+        color: black
+    &__p
+        margin-block-end: 30px
+        font-size: 1.4rem
+        font-weight: 500
+        line-height: 1.6rem
+        color: #757575
+
+.currency-table-container
+    inline-size: 70%
+    min-inline-size: 235px
+    max-inline-size: 500px
+    block-size: 360px
+    margin: 0 auto
+    &__title
+        margin-block-end: 15px
+        text-align: start
+        font-size: 1.8rem
+        font-weight: bold
+        line-height: 2.3rem
+        color: $bitcoin-orange
+    &__updated
+        display: flex
+        justify-content: center
+        align-items: center
+        inline-size: 190px
+        block-size: 30px
+        margin: 15px auto 0
+        font-size: 1.2rem
+        background-color: $soft-orange
+        border-radius: 8px
+
+
+.currency-information
+    inline-size: 90%
+    min-inline-size: 230px
+    max-inline-size: 300px
+    block-size: 250px
+    margin: 0 auto
+    &__table
+        inline-size: 100%
+        block-size: 100%
+        border-radius: 15px
+        td
+            inline-size: 50%
+            font-size: 1.6rem
+            font-weight: 500
+            line-height: 1.9rem
+            color: $gray
+            background-color: white
+    .currency-information__column-right
+        font-size: 1.4rem
+        font-weight: normal
+        line-height: 1.7rem
+        color: #757575
+    &__icon-up
+        margin-inline-start: 10px
+        font-size: 15px
+        color: rgb(21, 226, 55)
+    &__icon-down
+        @extend .currency-information__icon-up
+        color: #bd1616
+
+.info-cards-section
+    position: relative
+    inline-size: 100%
+    min-inline-size: 320px
+    block-size: auto
+    padding: 20px 10px
+    background-color: #201E1C
+    &__img
+        position: absolute
+        inset-block-start: -10px
+        inset-inline-start: calc(50% - 20px)
+    &__title
+        inline-size: 90%
+        min-inline-size: 288px
+        block-size: auto
+        margin: 50px auto 0
+        text-align: center
+    &__h2
+        margin-block-end: 20px
+        font-size: 2.4rem
+        line-height: 2.6rem
+        color: white
+    &__p
+        margin-block-end: 20px
+        font-size: 1.4rem
+        font-weight: 500
+        line-height: 1.8rem
+        color: #808080

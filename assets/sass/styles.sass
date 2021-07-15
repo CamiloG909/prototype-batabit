@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap')
 
 // Colores
 $gradient-bg: linear-gradient(to right top, #f7931a, #bc7018, #844f14, #51300f, #231400)
@@ -10,12 +10,14 @@ $gray: #bababa
 $off-white: #faf8f7
 
 .material-icons-outlined
-    line-height: 0
+    font-size: 10px
+    vertical-align: middle
     user-select: none
 
 *
+    margin: 0
     box-sizing: border-box
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'DM Sans', sans-serif
 
 html
     font-size: 10px
@@ -119,6 +121,7 @@ html
         font-size: 1.8rem
         font-weight: bold
         line-height: 2.3rem
+        text-align: center
         color: $bitcoin-orange
     &__updated
         display: flex
@@ -130,7 +133,6 @@ html
         font-size: 1.2rem
         background-color: $soft-orange
         border-radius: 8px
-
 
 .currency-information
     inline-size: 90%
@@ -190,3 +192,153 @@ html
         font-weight: 500
         line-height: 1.8rem
         color: #808080
+
+.info-card
+    inline-size: 90%
+    min-inline-size: 288px
+    max-inline-size: 400px
+    min-block-size: 150px
+    margin: 15px auto
+    padding: 15px
+    background-color: #282623
+    border-radius: 5px
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16)
+    &__icon
+        margin-block-start: 10px
+        font-size: 20px
+        color: $bitcoin-orange
+    &__title
+        margin: 10px 0
+        font-size: 1.8rem
+        font-weight: bold
+        color: white
+    &__text
+        font-size: 1.4rem
+        font-weight: 500
+        line-height: 1.8rem
+        color: #808080
+
+.bitcoin-img-container
+    inline-size: 100%
+    min-inline-size: 320px
+    block-size: 50vh
+    text-align: center
+    background-image: url('../img/bitcoinbaby.png')
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    h2
+        padding-block-start: 60px
+        font-size: 2.4rem
+        font-weight: bold
+        line-height: 2.6rem
+        color: white
+
+.section-plans
+    padding: 60px 0 40px
+    text-align: center
+    background-color: $off-white
+    &__text
+        @extend .exchange__container-text
+    &__h2
+        @extend .exchange__h2
+    &__p
+        @extend .exchange__p
+        margin-block-end: 10px
+
+.plans-cards-slider
+    display: flex
+    overflow-x: scroll
+    overscroll-behavior-x: contain
+    scroll-snap-type: x proximity
+    block-size: 300px
+
+.plan-card
+    position: relative
+    scroll-snap-align: center // Deja alineada alguna tarjeta en el centro del scroll
+    inline-size: 65%
+    min-inline-size: 208px
+    max-inline-size: 300px
+    block-size: 240px
+    margin: 40px 10px 0
+    padding: 0 15px
+    background-color: white
+    border-radius: 10px
+    box-shadow: 0 4px 8px rgba(75, 59, 16, 0.16)
+    &__header
+        position: absolute
+        inline-size: 120px
+        block-size: 31px
+        inset-block-start: -15px
+        inset-inline-start: calc( 50% - 60px )
+        padding: 9px
+        font-size: 1.2rem
+        font-weight: bold
+        color: white
+        background-color: $bitcoin-orange
+        border-radius: 8px
+    &__title
+        padding-block-start: 30px
+        font-size: 1.4rem  
+        font-weight: bold
+        line-height: 1.8rem
+        color: black
+    &__price
+        padding: 5px 0
+        font-size: 5.2rem
+        font-weight: bold
+        line-height: 6.3rem
+        color: black
+        sup
+            font-size: 1.2rem
+            font-weight: 300
+    &__saving
+        padding-block-end: 30px
+        font-size: 1.2rem
+        color: #757575
+
+.plan-card-btn
+    padding: 15px 20px
+    text-decoration: none
+    font-size: 1.4rem
+    font-weight: bold
+    color: black
+    background-color: $off-white
+    border: 2px solid $bitcoin-orange
+    border-radius: 4px
+    &__icon
+        margin-inline-start: 10px
+        font-size: 2.4rem
+        color: $bitcoin-orange
+
+footer
+    display: flex
+    align-items: center
+    inline-size: 100%
+    block-size: 150px
+    background-color: $bitcoin-orange
+    section
+        display: flex
+        justify-content: center
+        inline-size: 50%
+    .left-footer
+        ul
+            font-size: 1.4rem
+            font-weight: 500
+            list-style: none
+            li
+                margin: 10px 0
+                a
+                    text-decoration: none
+                    color: white
+
+@media screen and ( min-width: 960px )
+
+    .info-cards-container
+        display: flex
+        flex-wrap: wrap
+        inline-size: 930px
+        margin: 0 auto
+
+    .plans-cards-slider
+        justify-content: center

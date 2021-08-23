@@ -1,3 +1,3 @@
-# Curso #3 responsive mobile first
+# Responsive mobile first
 
-Bitcoins prototype
+Batatabit prototype
